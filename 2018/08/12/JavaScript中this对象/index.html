@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="March">
 <meta property="og:description" content="学习JavaScript函数时这一章节时，this对象是有点坑的地方。其他人我不知道，在我看了教程之后感觉还是懵的。简单点的还可以分析的出来，复杂点的就只能懵逼了。为了搞清楚this，上网找了很多资料，这里 是说的很清楚的一篇。     在JavaScript中this对象只会在函数中需要被确定，在函数中存在4中不同的情况。如果是在全局作用域下，则this就是全局对象，也就是window，其他情况">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-16T05:45:10.835Z">
+<meta property="og:updated_time" content="2018-10-01T02:50:03.986Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中this对象">
 <meta name="twitter:description" content="学习JavaScript函数时这一章节时，this对象是有点坑的地方。其他人我不知道，在我看了教程之后感觉还是懵的。简单点的还可以分析的出来，复杂点的就只能懵逼了。为了搞清楚this，上网找了很多资料，这里 是说的很清楚的一篇。     在JavaScript中this对象只会在函数中需要被确定，在函数中存在4中不同的情况。如果是在全局作用域下，则this就是全局对象，也就是window，其他情况">
@@ -366,7 +366,7 @@
         <p>学习JavaScript函数时这一章节时，this对象是有点坑的地方。其他人我不知道，在我看了教程之后感觉还是懵的。简单点的还可以分析的出来，复杂点的就只能懵逼了。为了搞清楚this，上网找了很多资料，<a href="http://www.otakustay.com/object-lookup-in-javascript/" target="_blank" rel="noopener">这里</a> 是说的很清楚的一篇。    </p>
 <p>在JavaScript中this对象只会在函数中需要被确定，在函数中存在4中不同的情况。如果是在全局作用域下，则this就是全局对象，也就是window，其他情况如下：   </p>
 <ul>
-<li><h4 id="在单独的函数中出现"><a href="#在单独的函数中出现" class="headerlink" title="在单独的函数中出现"></a><strong>在单独的函数中出现</strong></h4><p>这里的函数是作为单独的变量出现，而不是作为属性被调用  </p>
+<li><h4 id="在单独的函数中出现"><a href="#在单独的函数中出现" class="headerlink" title="在单独的函数中出现"></a><strong>在单独的函数中出现</strong></h4><p>这里的函数是作为单独的声明出现，而不是作为属性被调用  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function foo()&#123;</span><br><span class="line">console.log(this.name); //this对象为全局对象window</span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -439,6 +439,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/22/JS中for循环里的闭包问题/" rel="prev" title="JS中for循环里的闭包问题">
+                JS中for循环里的闭包问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +523,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
