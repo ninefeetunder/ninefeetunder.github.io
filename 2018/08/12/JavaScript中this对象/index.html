@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="March">
 <meta property="og:description" content="学习JavaScript函数时这一章节时，this对象是有点坑的地方。其他人我不知道，在我看了教程之后感觉还是懵的。简单点的还可以分析的出来，复杂点的就只能懵逼了。为了搞清楚this，上网找了很多资料，这里 是说的很清楚的一篇。     在JavaScript中this对象只会在函数中需要被确定，在函数中存在4中不同的情况。如果是在全局作用域下，则this就是全局对象，也就是window，其他情况">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T02:50:03.986Z">
+<meta property="og:updated_time" content="2018-10-05T10:03:41.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中this对象">
 <meta name="twitter:description" content="学习JavaScript函数时这一章节时，this对象是有点坑的地方。其他人我不知道，在我看了教程之后感觉还是懵的。简单点的还可以分析的出来，复杂点的就只能懵逼了。为了搞清楚this，上网找了很多资料，这里 是说的很清楚的一篇。     在JavaScript中this对象只会在函数中需要被确定，在函数中存在4中不同的情况。如果是在全局作用域下，则this就是全局对象，也就是window，其他情况">
@@ -367,19 +367,19 @@
 <p>在JavaScript中this对象只会在函数中需要被确定，在函数中存在4中不同的情况。如果是在全局作用域下，则this就是全局对象，也就是window，其他情况如下：   </p>
 <ul>
 <li><h4 id="在单独的函数中出现"><a href="#在单独的函数中出现" class="headerlink" title="在单独的函数中出现"></a><strong>在单独的函数中出现</strong></h4><p>这里的函数是作为单独的声明出现，而不是作为属性被调用  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function foo()&#123;</span><br><span class="line">console.log(this.name); //this对象为全局对象window</span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = &quot;wzq&quot;;</span><br><span class="line">function foo()&#123;</span><br><span class="line">console.log(this.name); //this对象为全局对象window--wzq</span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p> 这种情况下，foo函数体中的this永远为Global对象，也就是window对象。  </p>
 <ul>
 <li><h4 id="在作为属性的函数中出现"><a href="#在作为属性的函数中出现" class="headerlink" title="在作为属性的函数中出现"></a><strong>在作为属性的函数中出现</strong></h4><p>这里的函数是作为一个对象的属性。当对象调用这个属性，也就是执行这个函数。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo(name) &#123;</span><br><span class="line">   console.log(this.name); //this对象是对象o</span><br><span class="line">&#125;</span><br><span class="line">var o = &#123; foo: foo &#125;;</span><br><span class="line">o.foo(&apos;name&apos;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">   console.log(this.name); //this对象是对象o--wzq;</span><br><span class="line">&#125;</span><br><span class="line">var o = &#123; foo: foo,name:&quot;wzq&quot; &#125;;</span><br><span class="line">o.foo();</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p> 函数foo为对象o的属性，这时函数体内的this对象永远为调用这个函数的对象，这里就是对象o。  </p>
 <ul>
 <li><h4 id="被new用来构造对象的函数中出现"><a href="#被new用来构造对象的函数中出现" class="headerlink" title="被new用来构造对象的函数中出现"></a><strong>被new用来构造对象的函数中出现</strong></h4><p>使用new来构造出一个对象。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function foo(name)&#123;</span><br><span class="line">this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">var o = new foo(&apos;name&apos;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function foo()&#123;</span><br><span class="line">this.name = &quot;wzq&quot;;</span><br><span class="line">this.age = 20;</span><br><span class="line">&#125;</span><br><span class="line">var o = new foo();</span><br><span class="line">console.log(o.name)  // wzq</span><br><span class="line">console.log(o.age)  //20</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p> 这种模式下，函数体中的this永远为new foo()返回的对象。  </p>
