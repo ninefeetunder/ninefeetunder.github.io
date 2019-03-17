@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="事件事件就是用户或浏览器自身执行的某种动作。例如click,load和mouseover，它们都是事件的名字（事件名字）。JavaScript与HTML的交互使用过事件实现的。   事件流事件流描述的就是从页面中接收事件的顺序。当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。   &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;">
+<meta name="description" content="事件事件就是用户或浏览器自身执行的某种动作。例如click,load和mouseover，它们都是事件的名字（事件名字）。JavaScript与HTML的交互使用过事件实现的。   事件流事件流描述的就是从页面中接收事件的顺序。当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。12345678910&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;ht">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="事件流">
 <meta property="og:url" content="http://yoursite.com/2018/10/23/事件流/index.html">
 <meta property="og:site_name" content="March">
-<meta property="og:description" content="事件事件就是用户或浏览器自身执行的某种动作。例如click,load和mouseover，它们都是事件的名字（事件名字）。JavaScript与HTML的交互使用过事件实现的。   事件流事件流描述的就是从页面中接收事件的顺序。当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。   &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;">
+<meta property="og:description" content="事件事件就是用户或浏览器自身执行的某种动作。例如click,load和mouseover，它们都是事件的名字（事件名字）。JavaScript与HTML的交互使用过事件实现的。   事件流事件流描述的就是从页面中接收事件的顺序。当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。12345678910&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;ht">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-14T14:00:39.192Z">
+<meta property="og:updated_time" content="2019-03-17T03:15:28.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件流">
-<meta name="twitter:description" content="事件事件就是用户或浏览器自身执行的某种动作。例如click,load和mouseover，它们都是事件的名字（事件名字）。JavaScript与HTML的交互使用过事件实现的。   事件流事件流描述的就是从页面中接收事件的顺序。当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。   &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;">
+<meta name="twitter:description" content="事件事件就是用户或浏览器自身执行的某种动作。例如click,load和mouseover，它们都是事件的名字（事件名字）。JavaScript与HTML的交互使用过事件实现的。   事件流事件流描述的就是从页面中接收事件的顺序。当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。12345678910&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;ht">
 
 
 
@@ -364,18 +364,8 @@
 
       
         <h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>事件就是用户或浏览器自身执行的某种动作。例如click,load和mouseover，它们都是事件的名字（事件名字）。JavaScript与HTML的交互使用过事件实现的。  </p>
-<h3 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h3><p>事件流描述的就是从页面中接收事件的顺序。<br>当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。  </p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head lang=&quot;en&quot;&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;事件&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;mydiv&quot;&gt;click me!&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>事件会按照给定的顺序一层一层的传递下去并被执行。<br>事件流有两种模型。    </p>
+<h3 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h3><p>事件流描述的就是从页面中接收事件的顺序。<br>当你点击一个元素时，你也点击了它的容器元素，也点击了整个文档元素。于是事件便有了一个传递的过程。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>事件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"mydiv"</span>&gt;</span>click me!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>事件会按照给定的顺序一层一层的传递下去并被执行。<br>事件流有两种模型。    </p>
 <h4 id="事件冒泡模型"><a href="#事件冒泡模型" class="headerlink" title="事件冒泡模型"></a>事件冒泡模型</h4><p>事件冒泡，即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级的向上传播到较为不具体的结点。<br>以之前HTML页面为例，当点击”click me!”的div元素时，那么这个click事件会按照如下顺序传播：   </p>
 <p>div -&gt; body -&gt; html -&gt; document<br>IE9， Firefox， Chrome，Safari会将事件一直冒泡到window对象。</p>
 <h4 id="事件捕捉模型"><a href="#事件捕捉模型" class="headerlink" title="事件捕捉模型"></a>事件捕捉模型</h4><p>事件捕获是从不太具体的节点最先接收事件，而最具体的节点则最后接收到事件。当点击上述div元素时，click事件会按照如下顺序传递：<br>document -&gt; html -&gt; body -&gt; div<br>尽管”DOM2级事件”规范要求事件应该从document对象开始传播，但是这些浏览器都是从window对象开始事件捕获。  </p>
@@ -388,28 +378,17 @@
 </ol>
 <h3 id="事件处理程序"><a href="#事件处理程序" class="headerlink" title="事件处理程序"></a>事件处理程序</h3><p>为了响应(处理)某个事件的函数就叫做事件处理程序（或事件侦听器），事件处理程序的名字是以”on”开头，因此click事件的事件处理程序就是”onclick”,load事件的事件处理程序就是”onload”。<br>你若触发，我便执行———事件发生，调用事件的事件处理程序。  </p>
 <h4 id="DOM0级事件处理程序"><a href="#DOM0级事件处理程序" class="headerlink" title="DOM0级事件处理程序"></a>DOM0级事件处理程序</h4><p>DOM0级事件处理程序需要，事件处理程序名字和事件处理程序函数。  </p>
-<pre><code>var div = document.getElementById(&quot;mydiv&quot;);
-div.onclick = function(){
-alert(&quot;我被点击了！&quot;);
-alert(this.id);   // mydiv
-}
-</code></pre><p>使用DOM0级方法指定的事件处理程序被认为是元素的方法，该函数是在元素的作用域中运行。  </p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">"mydiv"</span>);</span><br><span class="line">div.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">alert(<span class="string">"我被点击了！"</span>);</span><br><span class="line">alert(<span class="keyword">this</span>.id);   <span class="comment">// mydiv</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用DOM0级方法指定的事件处理程序被认为是元素的方法，该函数是在元素的作用域中运行。  </p>
 <h4 id="DOM2级事件处理程序"><a href="#DOM2级事件处理程序" class="headerlink" title="DOM2级事件处理程序"></a>DOM2级事件处理程序</h4><p>主要使用addEventListener和removeEventListener这两个方法为元素指定和删除事件处理程序，它们都接受3个参数：  </p>
 <ol>
 <li>要处理事件的名称 ( 注意是名称 )</li>
 <li>作为事件处理程序的函数。 </li>
 <li>一个布尔值（true表示在捕获阶段调用事件处理程序，false表示在冒泡阶段调用事件处理函数。多为false与DOM流对应）  </li>
 </ol>
-<pre><code>var div = document.getElementById(&quot;mydiv&quot;);
-div.addEventListener(&quot;click&quot;, function(){
-    alert(&quot;emmmmm&quot;);
-}, false);
-</code></pre><p>删除事件处理程序：  </p>
-<pre><code>var handler = function(){alert(&quot;emmmm&quot;)};
-var div = document.getElementById(&quot;mydiv&quot;);
-div.addEventListener(&quot;click&quot;, handler, false); //指定
-div.removeEventListener(&quot;click&quot;,handler, false); //删除
-</code></pre><p>这样添加的事件处理程序也是在其依附的元素的作用域中运行。（事件处理函数中的this就是触发事件的对象）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">"mydiv"</span>);</span><br><span class="line">div.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  alert(<span class="string">"emmmmm"</span>);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>删除事件处理程序：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> handler = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="string">"emmmm"</span>)&#125;;</span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">"mydiv"</span>);</span><br><span class="line">div.addEventListener(<span class="string">"click"</span>, handler, <span class="literal">false</span>); <span class="comment">//指定</span></span><br><span class="line">div.removeEventListener(<span class="string">"click"</span>,handler, <span class="literal">false</span>); <span class="comment">//删除</span></span><br></pre></td></tr></table></figure></p>
+<p>这样添加的事件处理程序也是在其依附的元素的作用域中运行。（事件处理函数中的this就是触发事件的对象）。</p>
 
       
     </div>
@@ -543,7 +522,7 @@ div.removeEventListener(&quot;click&quot;,handler, false); //删除
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -554,7 +533,7 @@ div.removeEventListener(&quot;click&quot;,handler, false); //删除
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -565,7 +544,7 @@ div.removeEventListener(&quot;click&quot;,handler, false); //删除
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
