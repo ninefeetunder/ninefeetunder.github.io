@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Redux,React," />
+  <meta name="keywords" content="React,Redux," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="最近简单的学习下redux，对redux的理解还不够深刻，先记下再说。    Redux就是一个存放数据的仓库，将所有组件的数据集中在store中。同时store中的数据也可以被各个组件访问到。    store是唯一的。只有store自己才能改变store中的内容。    当存在很多组件时并且每个组件都有自己的数据时，可以为每个组件创建一个reducer，把index作为出口文件，最后在总的re">
-<meta name="keywords" content="Redux,React">
+<meta name="description" content="最近简单的学习下redux，对redux的理解还不够深刻，先记下再说。    Redux就是一个存放数据的仓库，将所有组件的数据集中在store中。同时store中的数据也可以被各个组件访问到。    store是唯一的。只有store自己才能改修改store中的内容。    当存在很多组件时并且每个组件都有自己的数据时，可以为每个组件创建一个reducer，把index作为出口文件，最后在总的r">
+<meta name="keywords" content="React,Redux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redux">
 <meta property="og:url" content="http://yoursite.com/2019/03/23/Redux-1/index.html">
 <meta property="og:site_name" content="Windu">
-<meta property="og:description" content="最近简单的学习下redux，对redux的理解还不够深刻，先记下再说。    Redux就是一个存放数据的仓库，将所有组件的数据集中在store中。同时store中的数据也可以被各个组件访问到。    store是唯一的。只有store自己才能改变store中的内容。    当存在很多组件时并且每个组件都有自己的数据时，可以为每个组件创建一个reducer，把index作为出口文件，最后在总的re">
+<meta property="og:description" content="最近简单的学习下redux，对redux的理解还不够深刻，先记下再说。    Redux就是一个存放数据的仓库，将所有组件的数据集中在store中。同时store中的数据也可以被各个组件访问到。    store是唯一的。只有store自己才能改修改store中的内容。    当存在很多组件时并且每个组件都有自己的数据时，可以为每个组件创建一个reducer，把index作为出口文件，最后在总的r">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-23T03:02:57.491Z">
+<meta property="og:updated_time" content="2019-03-23T08:30:29.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redux">
-<meta name="twitter:description" content="最近简单的学习下redux，对redux的理解还不够深刻，先记下再说。    Redux就是一个存放数据的仓库，将所有组件的数据集中在store中。同时store中的数据也可以被各个组件访问到。    store是唯一的。只有store自己才能改变store中的内容。    当存在很多组件时并且每个组件都有自己的数据时，可以为每个组件创建一个reducer，把index作为出口文件，最后在总的re">
+<meta name="twitter:description" content="最近简单的学习下redux，对redux的理解还不够深刻，先记下再说。    Redux就是一个存放数据的仓库，将所有组件的数据集中在store中。同时store中的数据也可以被各个组件访问到。    store是唯一的。只有store自己才能改修改store中的内容。    当存在很多组件时并且每个组件都有自己的数据时，可以为每个组件创建一个reducer，把index作为出口文件，最后在总的r">
 
 
 
@@ -367,7 +367,7 @@
 <ol>
 <li><p>Redux就是一个存放数据的仓库，将所有组件的数据集中在store中。同时store中的数据也可以被各个组件访问到。  </p>
 </li>
-<li><p>store是唯一的。只有store自己才能改变store中的内容。  </p>
+<li><p>store是唯一的。只有store自己才能改修改store中的内容。  </p>
 </li>
 <li><p>当存在很多组件时并且每个组件都有自己的数据时，可以为每个组件创建一个reducer，把index作为出口文件，最后在总的reducer中通过调用combineReducers把所有的reducer组合成一个总的reducer，最后在利用该reducer创建store，这样store中就拥有了各个组件对应的数据。  </p>
 </li>
@@ -375,9 +375,11 @@
 </li>
 <li><p>reducer函数只能接收state并不能直接修改state中的值。  </p>
 </li>
-<li><p>reducer中要定义这个组件需要使用的数据(defaultState)，store中关于该组件的数据就是参照这个值创建的，所以这个defaultState是reducer中函数state参数的初始值。  </p>
+<li><p>reducer中要定义这个组件需要使用的数据(defaultState)，store中关于该组件的数据就是参照这个值创建的，所以这个defaultState是reducer函数state参数的初始值。  </p>
 </li>
-<li><p>reducer返回数据给store，store根据这些数据比对自己内部中存储的数据 ，一旦发现数据改变了，store根据reducer返回的数据自己修改自己内部的数据。  </p>
+<li><p>reducer返回数据给store，store根据这些数据比对自己内部中存储的数据 ，一旦发现数据改变了，就修改自己内部的数据<strong>（对应第2条）</strong>。 </p>
+</li>
+<li><p>dispatch把action发送个store，store这时候并不会去自己去修改数据。所以store又把action发送给reducer（store发送的action可以被每一个reducer接收到），让reducer进行处理后，store根据reducer返回的数据更新自己内部的数据<strong>（对应第7条）</strong>。  </p>
 </li>
 <li><p>还是jio的react-redux更方便使用。使用react-redux的关键: Provider, connect。</p>
 </li>
@@ -409,9 +411,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Redux/" rel="tag"># Redux</a>
-          
             <a href="/tags/React/" rel="tag"># React</a>
+          
+            <a href="/tags/Redux/" rel="tag"># Redux</a>
           
         </div>
       
