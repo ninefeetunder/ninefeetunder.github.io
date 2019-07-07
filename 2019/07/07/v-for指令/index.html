@@ -88,7 +88,7 @@
 <meta property="og:description" content="v-for是vue中的指令。   这个指令与其他指令行为有点不太一样，让我乍一看感觉有点蒙，所以记录一下。   v-for的行为总结为两句话。v-for在遍历出数据时也会再次创建使用v-for指令的这个对象v-for遍历出来的数据就只能在刚被创建出来的这个对象上使用   12345678&amp;lt;div id=&quot;app&quot;&amp;gt;  &amp;lt;ol&amp;gt;    &amp;lt;li v-for=&quot;todo i">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/07/07/5d21e303268e986766.png">
-<meta property="og:updated_time" content="2019-07-07T12:30:31.735Z">
+<meta property="og:updated_time" content="2019-07-07T12:41:24.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v-for指令">
 <meta name="twitter:description" content="v-for是vue中的指令。   这个指令与其他指令行为有点不太一样，让我乍一看感觉有点蒙，所以记录一下。   v-for的行为总结为两句话。v-for在遍历出数据时也会再次创建使用v-for指令的这个对象v-for遍历出来的数据就只能在刚被创建出来的这个对象上使用   12345678&amp;lt;div id=&quot;app&quot;&amp;gt;  &amp;lt;ol&amp;gt;    &amp;lt;li v-for=&quot;todo i">
@@ -360,7 +360,9 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">:key</span>=<span class="string">"todo.id"</span>&gt;</span></span><br><span class="line">      &#123;&#123; todo.text &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">            el: &quot;#app&quot;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                todos: [</span><br><span class="line">                    &#123;id: 0, text: &quot;Vue&quot;&#125;,</span><br><span class="line">                    &#123;id: 1, text: &quot;v-for指令&quot;&#125;,</span><br><span class="line">                    &#123;id: 2, text: &quot;显示效果&quot;&#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
 <p>显示效果：<br><img src="https://i.loli.net/2019/07/07/5d21e303268e986766.png" alt="vfor.png"></p>
-<p>因为li使用了v-for指令从todos中遍历出todo，所以li标签也就被再次创建出来了。同时遍历出的每个todo也就只能用于同时被创建出的li中。</p>
+<p>因为li使用了v-for指令从todos中遍历出todo，所以li标签也就被再次创建出来了。同时遍历出的每个todo也就只能用于同时被创建出的li中。  </p>
+<p>也就是说v-for指令可以同时渲染出多个元素，还要注意必须要给每个元素绑定key值。  </p>
+<p>key值的作用与虚拟DOM的渲染性能有关，下篇文章在详细的说~</p>
 
       
     </div>
