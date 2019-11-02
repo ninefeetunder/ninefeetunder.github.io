@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="懒加载," />
 
 
 
@@ -79,22 +79,20 @@
 
 
 
-<meta name="description" content="json是一种轻量级的数据格式，并不一种编程语言。   语法json有三种类型的值：    简单值：这与JavaScript中的语法类似，可以再json中表示字符串，数值，null，布尔值，但是json不支持JavaScript中的特殊值undefined。    对象：对象是一种复杂数据类型，json中的对象是一组无序的键值对。每个键值对中的值可以是简单值，也可以是复杂数据类型的值。    数组">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="定义图片的懒加载也叫延迟加载，在长网页中未出现在可视区的图片延迟加载，可以很好地优化网页的性能。用户滚动到它们之前，可视区域外的图像不会加载。   解决的问题 提升网页加载速度 防止无效的资源加载  实现思路先将每个图片的src属性设置为占位图片，图片真实的url则设置在data-src属性上，通过监听scroll事件判断 浏览器可视区高度 与当前 浏览器滚动条滚动的距离 之和是否大于 图片元素在">
+<meta name="keywords" content="懒加载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Json">
-<meta property="og:url" content="http://yoursite.com/2018/10/30/Json/index.html">
+<meta property="og:title" content="图片懒加载">
+<meta property="og:url" content="http://yoursite.com/2019/11/02/图片懒加载/index.html">
 <meta property="og:site_name" content="风度">
-<meta property="og:description" content="json是一种轻量级的数据格式，并不一种编程语言。   语法json有三种类型的值：    简单值：这与JavaScript中的语法类似，可以再json中表示字符串，数值，null，布尔值，但是json不支持JavaScript中的特殊值undefined。    对象：对象是一种复杂数据类型，json中的对象是一组无序的键值对。每个键值对中的值可以是简单值，也可以是复杂数据类型的值。    数组">
+<meta property="og:description" content="定义图片的懒加载也叫延迟加载，在长网页中未出现在可视区的图片延迟加载，可以很好地优化网页的性能。用户滚动到它们之前，可视区域外的图像不会加载。   解决的问题 提升网页加载速度 防止无效的资源加载  实现思路先将每个图片的src属性设置为占位图片，图片真实的url则设置在data-src属性上，通过监听scroll事件判断 浏览器可视区高度 与当前 浏览器滚动条滚动的距离 之和是否大于 图片元素在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/10/30/5bd85f4335641.jpg">
-<meta property="og:image" content="https://i.loli.net/2018/10/30/5bd86807a02c9.jpg">
-<meta property="og:image" content="https://i.loli.net/2018/10/30/5bd86ac90273d.jpg">
-<meta property="og:updated_time" content="2019-03-17T03:13:51.874Z">
+<meta property="og:image" content="https://i.loli.net/2019/11/02/JCsRO5DoXe4xb6E.gif">
+<meta property="og:updated_time" content="2019-11-02T14:31:54.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Json">
-<meta name="twitter:description" content="json是一种轻量级的数据格式，并不一种编程语言。   语法json有三种类型的值：    简单值：这与JavaScript中的语法类似，可以再json中表示字符串，数值，null，布尔值，但是json不支持JavaScript中的特殊值undefined。    对象：对象是一种复杂数据类型，json中的对象是一组无序的键值对。每个键值对中的值可以是简单值，也可以是复杂数据类型的值。    数组">
-<meta name="twitter:image" content="https://i.loli.net/2018/10/30/5bd85f4335641.jpg">
+<meta name="twitter:title" content="图片懒加载">
+<meta name="twitter:description" content="定义图片的懒加载也叫延迟加载，在长网页中未出现在可视区的图片延迟加载，可以很好地优化网页的性能。用户滚动到它们之前，可视区域外的图像不会加载。   解决的问题 提升网页加载速度 防止无效的资源加载  实现思路先将每个图片的src属性设置为占位图片，图片真实的url则设置在data-src属性上，通过监听scroll事件判断 浏览器可视区高度 与当前 浏览器滚动条滚动的距离 之和是否大于 图片元素在">
+<meta name="twitter:image" content="https://i.loli.net/2019/11/02/JCsRO5DoXe4xb6E.gif">
 
 
 
@@ -124,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/30/Json/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/02/图片懒加载/"/>
 
 
 
 
 
-  <title>Json | 风度</title>
+  <title>图片懒加载 | 风度</title>
   
 
 
@@ -267,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/30/Json/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/图片懒加载/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="风度">
@@ -284,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Json</h1>
+          <h1 class="post-title" itemprop="name headline">图片懒加载</h1>
         
 
         <div class="post-meta">
@@ -296,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-30T21:13:00+08:00">
-                2018-10-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-02T21:48:00+08:00">
+                2019-11-02
               </time>
             
 
@@ -319,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/性能优化/" itemprop="url" rel="index">
+                    <span itemprop="name">性能优化</span>
                   </a>
                 </span>
 
@@ -356,32 +354,16 @@
       
 
       
-        <p>json是一种轻量级的数据格式，并不一种编程语言。  </p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>json有三种类型的值：  </p>
-<ol>
-<li><p>简单值：这与JavaScript中的语法类似，可以再json中表示字符串，数值，null，布尔值，但是json不支持JavaScript中的特殊值undefined。  </p>
-</li>
-<li><p>对象：对象是一种复杂数据类型，json中的对象是一组无序的键值对。每个键值对中的值可以是简单值，也可以是复杂数据类型的值。  </p>
-</li>
-<li><p>数组：数组也是一种复杂数据类型，数组是一组有序的值得列表，可以通过数值索引访问其中的值。数组的值可以是任意的类型—简单值，复杂类型值。  </p>
-</li>
-</ol>
-<p>需要注意的是在json中没有变量，函数，对象实例的概念。</p>
-<h4 id="简单值"><a href="#简单值" class="headerlink" title="简单值"></a>简单值</h4><p>简单值很简单，需要注意的就是json中的字符串必须加双引号。<br>‘emmmm’  无效<br>“emmmm”  有效  </p>
-<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>json中的对象与JavaScript对象字面量有些不同。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name:<span class="string">"wzq"</span>,</span><br><span class="line">  age:<span class="number">20</span></span><br><span class="line"> &#125;;</span><br><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  <span class="string">"name"</span>:<span class="string">"wzq"</span>,</span><br><span class="line">  <span class="string">"age"</span>:<span class="number">20</span></span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure></p>
-<p>上面的两种对象字面量在JavaScript中都是合法的，只是我们不会在用字面量创建对象时给属性也加上双引号。在Chrome浏览器在测试：  </p>
-<p><img src="https://i.loli.net/2018/10/30/5bd85f4335641.jpg" alt="test.jpg">  </p>
-<p>在json中表示对象方式如下：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"name"</span>:<span class="string">"wzq"</span>,<span class="attr">"age"</span>:<span class="number">20</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="attr">"name"</span>:<span class="string">"wzq"</span>, <span class="attr">"age"</span>:<span class="number">20</span>, <span class="attr">"school"</span>:&#123;<span class="attr">"name"</span>:<span class="string">"HUT"</span>&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>与JavaScript中的对象相比，json中没有声明变量，并且在最后没有分号（并不是JavaScript的语句）。其次是在json对象中属性必须带上双引号，这是不可少的。  </p>
-<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p>快来找不同。<br>JavaScript中：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="string">"emmm"</span>, <span class="number">20</span>, [<span class="number">0</span>,<span class="number">1</span>], <span class="literal">true</span>, &#123;<span class="attr">name</span>:<span class="string">"wzq"</span>&#125;];</span><br></pre></td></tr></table></figure></p>
-<p>json中：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">"emmm"</span>, <span class="number">20</span>, [<span class="number">0</span>,<span class="number">1</span>], <span class="literal">true</span>, &#123;<span class="attr">"name"</span>:<span class="string">"wzq"</span>&#125;]</span><br></pre></td></tr></table></figure></p>
-<p>区别不再多说。  </p>
-<h4 id="解析与序列化"><a href="#解析与序列化" class="headerlink" title="解析与序列化"></a>解析与序列化</h4><p>ECMAScript5对解析JSON的行为进行了规范，定义了全局对象JSON。JSON对象有两个方法：stringify()和parse()。在简单的情况下，这stringify()方法把JavaScript对象序列化为JSON字符串，parse()方法把JSON字符串解析为原生JavaScript的值。 </p>
-<p><img src="https://i.loli.net/2018/10/30/5bd86807a02c9.jpg" alt="test3.jpg"></p>
-<p>值得注意的是经过序列化后的JSON字符串中，原JavaScript中的gf和fn属性都不见了。因为在序列化JavaScript对象时，所有函数及函数原型都会被有意的忽略，不体现在结果中，值为undefined的任何属性也都会被跳过。结果中最终都是值都是有效的JSON数据类型值。  </p>
-<p>JSON.parse()方法是把一个JSON字符串解析为JavaScript类型值。  </p>
-<p><img src="https://i.loli.net/2018/10/30/5bd86ac90273d.jpg" alt="test4.jpg"></p>
-<p>如果传给JSON.parse()的字符串不是有效的json，该方法会抛出错误。</p>
+        <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>图片的懒加载也叫延迟加载，在长网页中未出现在可视区的图片延迟加载，可以很好地优化网页的性能。用户滚动到它们之前，可视区域外的图像不会加载。  </p>
+<h3 id="解决的问题"><a href="#解决的问题" class="headerlink" title="解决的问题"></a>解决的问题</h3><ul>
+<li>提升网页加载速度</li>
+<li>防止无效的资源加载</li>
+</ul>
+<h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><p>先将每个图片的src属性设置为占位图片，图片真实的url则设置在data-src属性上，<br>通过监听scroll事件判断 <strong>浏览器可视区高度</strong> 与当前 <strong>浏览器滚动条滚动的距离</strong> 之和是否大于 <strong>图片元素在文档中的距离</strong>，大于则说明该图片已经出现在浏览器的视口中（可能是当前视口中，也可能已经出现过了），则把图片的src替换为data-src的值，展示图片。不大于则说明带图片还未出现在浏览器的视口中，也就不急着去加载。</p>
+<h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="https://i.loli.net/2019/11/02/JCsRO5DoXe4xb6E.gif" alt="lazyload.gif"></p>
+<p>没有出现在浏览器视口中的图片是有一个占位图片的，当我们滚动滚动条，下面的图片展示出来时，src属性才会被替换成真正需要展示的图片的url。也就实现了懒加载。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> viewHeight = <span class="built_in">document</span>.documentElement.clientHeight <span class="comment">// 浏览器可视区高度</span></span><br><span class="line"><span class="keyword">var</span> timer</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">lazyload</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 函数防抖</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">        clearTimeout(timer)</span><br><span class="line">    &#125;</span><br><span class="line">    timer = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> scrollTop = <span class="built_in">document</span>.documentElement.scrollTop<span class="comment">//获得当前浏览器滚动高度</span></span><br><span class="line">        <span class="keyword">var</span> imgs = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'img'</span>)</span><br><span class="line">        <span class="built_in">Array</span>.prototype.forEach.call(imgs, (item, index) =&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span> (viewHeight + scrollTop - item.offsetTop &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                item.src = item.dataset.src</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;, <span class="number">100</span>)</span><br><span class="line">&#125;</span><br><span class="line">lazyload()</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>, lazyload)</span><br></pre></td></tr></table></figure>
+<p>唯一需要注意的就是使用dataset时，属性需要和在img上定义的对应起来才行。</p>
 
       
     </div>
@@ -409,7 +391,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/懒加载/" rel="tag"># 懒加载</a>
           
         </div>
       
@@ -422,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/23/事件流/" rel="next" title="事件流">
-                <i class="fa fa-chevron-left"></i> 事件流
+              <a href="/2019/10/21/mongoose学习记录/" rel="next" title="mongoose学习记录">
+                <i class="fa fa-chevron-left"></i> mongoose学习记录
               </a>
             
           </div>
@@ -431,10 +413,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/02/Json补充/" rel="prev" title="Json补充">
-                Json补充 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -570,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单值"><span class="nav-number">2.</span> <span class="nav-text">简单值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象"><span class="nav-number">3.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组"><span class="nav-number">4.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析与序列化"><span class="nav-number">5.</span> <span class="nav-text">解析与序列化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决的问题"><span class="nav-number">2.</span> <span class="nav-text">解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现思路"><span class="nav-number">3.</span> <span class="nav-text">实现思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现效果"><span class="nav-number">4.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">5.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
             
 
           </div>
